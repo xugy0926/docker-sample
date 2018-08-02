@@ -55,4 +55,9 @@ WORKDIR /opt/webapp
 CMD ["node", "index.js"]
 ```
 
+```
+$ docker build .
+$ docker run <image_id>
+```
+
 
