@@ -46,4 +46,13 @@ server {
 $ docker run --name my-site -v "$(pwd)"/conf.d:/etc/nginx/conf.d -p 80:80 -d nginx
 ```
 
+#### 创建一个 node 项目 的Dockerfile
+
+```
+FROM node
+ADD ./ /opt/webapp/
+WORKDIR /opt/webapp
+CMD ["node", "index.js"]
+```
+
 
