@@ -60,7 +60,7 @@ $ docker build .
 $ docker run <image_id>
 ```
 
-https://github.com/xugy0926/docker-sample/tree/master/README.md/demo/node_project
+https://github.com/xugy0926/docker-sample/tree/master/demo/node_project
 
 #### mongodb
 
