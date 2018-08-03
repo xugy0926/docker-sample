@@ -46,12 +46,12 @@ server {
 $ docker run --name my-site -v "$(pwd)"/conf.d:/etc/nginx/conf.d -p 80:80 -d nginx
 ```
 
-#### 创建一个 node 项目 的Dockerfile
+#### 用 docker 运行一个 node 项目
 
 ```
 FROM node
-ADD ./ /opt/webapp/
-WORKDIR /opt/webapp
+ADD ./ /opt/app/
+WORKDIR /opt/app
 CMD ["node", "index.js"]
 ```
 
@@ -59,6 +59,8 @@ CMD ["node", "index.js"]
 $ docker build .
 $ docker run <image_id>
 ```
+
+https://github.com/xugy0926/docker-sample/tree/master/README.md/demo/node_project
 
 #### mongodb
 
