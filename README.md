@@ -14,9 +14,9 @@ $ docker run --name my-site -v "$(pwd)"/content:/user/share/nginx/html:ro -d ngi
 
 也可以用$(pwd)代替绝对路径。
 
-#### 启动一个 bash
+#### ubuntu bash
 
-有时候你需要一个 ubuntu 的 bash，可以直接通过 docker 一次性启动一个。
+临时需要一个 ubuntu 的 bash。
 
 ```
 $ docker run -it ubuntu bash
@@ -44,6 +44,12 @@ server {
 
 ```
 $ docker run --name my-site -v "$(pwd)"/conf.d:/etc/nginx/conf.d -p 80:80 -d nginx
+```
+
+#### node bash
+
+```
+$ docker run -it node bash
 ```
 
 #### 用 docker 运行一个 node 项目
