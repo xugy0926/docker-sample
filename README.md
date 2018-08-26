@@ -1,4 +1,4 @@
-# demo
+## demo
 
 #### 部署静态文件
 
@@ -72,6 +72,14 @@ https://github.com/xugy0926/docker-sample/tree/master/demo/node_project
 
 ```
 docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
+```
+
+## docker 基本操作
+
+#### 进入到容器
+
+```bash
+$ sudo docker exec -it <docker-id or docker-name> /bin/bash 
 ```
 
 
