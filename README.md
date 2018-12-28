@@ -9,7 +9,7 @@ $ docker run --name my-site -v /my_local_path/content:/usr/share/nginx/html:ro -
 `/my_local_path/content` 存放你的 `.html` 文件。`/my_local_path`是一个绝对路径。
 
 ```
-$ docker run --name my-site -v "$(pwd)"/content:/user/share/nginx/html:ro -d nginx
+$ docker run --name my-site -v "$(pwd)"/content:/usr/share/nginx/html:ro -d nginx
 ```
 
 也可以用$(pwd)代替绝对路径。
@@ -80,6 +80,18 @@ docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
 
 ```bash
 $ sudo docker exec -it <docker-id or docker-name> /bin/bash 
+```
+
+#### 从容器中拷贝文件到宿主机
+
+```bash
+$ docker cp contaienr-name:/folder/file ./
+```
+
+#### 从宿主机拷贝文件到容器
+
+```bash
+$ docker cp ./file container-name:/folder
 ```
 
 
